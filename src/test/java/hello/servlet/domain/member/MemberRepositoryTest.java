@@ -1,6 +1,7 @@
 package hello.servlet.domain.member;
 
 
+import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
@@ -28,7 +29,7 @@ public class MemberRepositoryTest {
 
         //then
         Member findMember = memberRepository.findById(savedMember.getId());
-        assertThat(findMember).isEqualTo(savedMember);
+        Assertions.assertThat(findMember).isEqualTo(savedMember);
     }
 
 
